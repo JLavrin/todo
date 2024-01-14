@@ -1,0 +1,22 @@
+# This is a generated file. Not intended for manual editing.
+version: "3.6"
+services:
+  api:
+    build:
+      context: "C:\\Users\\julia\\RiderProjects\\TaskApi\\TaskApi"
+      dockerfile: "Dockerfile"
+      target: "base"
+    command: []
+    entrypoint:
+    - "dotnet"
+    - "/app/bin/Debug/net6.0/TaskApi.dll"
+    environment:
+      ASPNETCORE_ENVIRONMENT: "Development"
+      DOTNET_USE_POLLING_FILE_WATCHER: "true"
+    image: "taskapi:dev"
+    ports: []
+    volumes:
+    - "C:\\Users\\julia\\.nuget\\packages:/root/.nuget/packages"
+    - "C:\\Users\\julia\\RiderProjects\\TaskApi\\TaskApi:/app:rw"
+    - "C:\\Users\\julia\\RiderProjects\\TaskApi:/src:rw"
+    working_dir: "/app"
